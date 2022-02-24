@@ -1,0 +1,85 @@
+@use '../global';
+@use '../util' as *;
+.main-music {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include breakpoint-up('medium') {
+    flex-direction: row;
+  }
+}
+.main-music-img,
+.main-music-content {
+  flex: 1;
+  width: 100%;
+}
+.main-music-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  img {
+    width: 100%;
+  }
+}
+.main-music-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  .songContent {
+    user-select: none;
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+.main-music-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  .nextPrevious,
+  .playPause {
+    user-select: none;
+    font-size: 3em;
+    color: var(--dark-blue-color);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .playPause {
+    padding: 0.3em;
+    background: var(--light-blue-color);
+    border-radius: 10%;
+  }
+}
+.progressBar-Wrapper {
+  width: 90%;
+  height: 0.8em;
+  border-radius: 10px;
+  background-color: var(--grey-color);
+  cursor: pointer;
+  .progressBar-progress {
+    width: 0%;
+    background-color: var(--dark-blue-color);
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+}
+.progressBar-time {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  .songDuration {
+    user-select: none;
+    &:hover {
+      cursor: default;
+    }
+  }
+}

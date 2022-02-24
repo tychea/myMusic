@@ -1,0 +1,32 @@
+@use '../util' as *;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+}
+
+body {
+  padding: 2em;
+  background-color: var(--light-blue-color);
+  font-family: var(--font-rubik);
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+
+  @include breakpoint-up('large') {
+    padding: 3em;
+  }
+  @include breakpoint-up('large') {
+  }
+  @include breakpoint-up('xlarge') {
+  }
+}
